@@ -1,0 +1,111 @@
+@import "bootstrap/bootstrap/scss/bootstrap.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media print {
+  html,
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto;
+  }
+  html .invoice-data, html section, html .row, html .data, html .label,
+body .invoice-data,
+body section,
+body .row,
+body .data,
+body .label {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  html .row,
+body .row {
+    border: 2px solid #555 !important;
+  }
+  html .row:nth-child(odd),
+body .row:nth-child(odd) {
+    border-bottom: none !important;
+  }
+  html .row:nth-child(even),
+body .row:nth-child(even) {
+    border-bottom: none !important;
+  }
+  html .row:last-child,
+body .row:last-child {
+    border-bottom: 2px solid #555 !important;
+  }
+  html .label,
+html .data,
+body .label,
+body .data {
+    padding-left: 0.4rem !important;
+    border: none !important;
+    border-right: 1px solid #555;
+  }
+  html .label,
+body .label {
+    border-right: 1px solid #555 !important;
+  }
+  html .message-section,
+body .message-section {
+    padding: 0.4rem 0 !important;
+  }
+  html #invoice-container h6,
+body #invoice-container h6 {
+    font-size: 0.9rem !important;
+  }
+  html .alert p,
+body .alert p {
+    font-size: 0.9rem !important;
+  }
+
+  /* ... the rest of the rules ... */
+}
+body {
+  background: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.invoice-data {
+  padding-bottom: 0;
+}
+.invoice-data .label {
+  border: 2px solid #555;
+  margin: 0 0 0 0.8rem;
+  background-color: #e0f2f1;
+  font-weight: bold;
+}
+.invoice-data .data {
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+  border-right: 2px solid #555;
+  background: #fff;
+  margin: 0 0.8rem 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  p,
+h6 {
+    font-size: 14px;
+  }
+
+  .invoice-data {
+    padding-top: 0;
+  }
+  .invoice-data .label,
+.invoice-data .data {
+    font-size: 12px;
+  }
+
+  .container {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}/*# sourceMappingURL=theme.css.map */

@@ -1,0 +1,104 @@
+$theme-colors: (
+  "primary": #15a362,
+  "info": #5b99ea,
+  "success": #16a362,
+  "warning": #eebf41,
+  "danger": #d26d69,
+);
+
+@import "bootstrap/bootstrap/scss/bootstrap.css";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@page {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media print {
+  html,
+  body {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: auto;
+    .invoice-data,section,.row,.data,.label {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .row {
+      border: 2px solid #555 !important;
+      &:nth-child(odd) {
+        border-bottom: none !important;
+      }
+      &:nth-child(even) {
+        border-bottom: none !important;
+      }
+      &:last-child {
+        border-bottom: 2px solid #555 !important;
+      }
+    }
+
+    .label,
+    .data {
+      padding-left: 0.4rem !important;
+      border: none !important;
+      border-right: 1px solid #555;
+    }
+    .label {
+      border-right: 1px solid #555 !important;
+    }
+
+    .message-section{
+        padding: .4rem 0 !important;
+    }
+
+    #invoice-container{
+        h6{
+            font-size: .9rem !important;
+        }
+    }
+    .alert{
+        p{
+            font-size: .9rem !important;
+        }
+    }
+  }
+  /* ... the rest of the rules ... */
+}
+
+
+.invoice-data {
+  padding-bottom: 0;
+
+  .label {
+    border: 2px solid #555;
+    margin: 0 0 0 0.8rem;
+    background-color: #e0f2f1;
+    font-weight: bold;
+  }
+  .data {
+    border-top: 2px solid #555;
+    border-bottom: 2px solid #555;
+    border-right: 2px solid #555;
+    background: #fff;
+    margin: 0 0.8rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  p,
+  h6 {
+    font-size: 14px;
+  }
+
+  .invoice-data {
+    padding-top: 0;
+    .label,
+    .data {
+      font-size: 12px;
+    }
+  }
+
+  .container {
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+}
